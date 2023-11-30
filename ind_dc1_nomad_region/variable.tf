@@ -3,7 +3,7 @@ variable "key_pair" {
   type = map(string)
   default = {
     "key_name"   = "mrnc-key.pem"
-    "public_key" = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCPE/bDCG6Lv65PgONOQrtjkC3EICrQpDTgZyZXLMChP3+imIR07lKh+FECmScldNmANbn/uLEymu/Tjc7LeTZYmE2iknnDGdIU6K5eGUfb9u+wm0GjPTwK7Qe/pfnZGQmQDYqDSveEJkoGMmU9LZDWSBVQgBqTpRN/buc6IvZVlSdwioLyQMoY/b7v5kM7dNphBCc3XmayU3E638SGYGFK9A9VBwUW7Zh76JlBxKCLrDJw7rVmJ3ecmsrKKXisrCCc1LzjVYHrDWYW6GUYpVkgelktMc7WZ63b1Flxg5brJ9Ftz55SoDqa/+GtSXumUonYY8Kjtt48CoVjyoxXHejv"
+    "public_key" = ""
   }
 }
 
@@ -38,13 +38,12 @@ variable "instance_count" {
 #VPC
 variable "subnet" {
   type    = string
-  default = "subnet-035e2140c50e794df" #Please make sure this subnet has accessibility to internet. Please use public subnet#
+  default = "" #Please make sure this subnet has accessibility to internet. Please use public subnet#
 }
 
 variable "sg_id" {
   type    = list(any)
-  default = ["sg-0d43e6170220d7450"]
-# default = ["sg-034c164acc2aa2bd5", "sg-09630b19e4bf94557"] ##Please insure this security group has Ports - 4646, 8500, 22 and ICMP enabled#
+  default = [""] ##Please insure this security group has Ports - 4646, 8500, 22 and ICMP enabled#
 }
 
 #UserScripts
