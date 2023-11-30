@@ -29,13 +29,12 @@ variable "instance_count" {
 #VPC
 variable "subnet" {
   type    = string
-  default = "subnet-035e2140c50e794df" #Please make sure this subnet has accessibility to internet. Please use public subnet#
+  default = "" #Please make sure this subnet has accessibility to internet. Please use public subnet#
 }
 
 variable "sg_id" {
   type    = list(any)
-  default = ["sg-0d43e6170220d7450"]
- # default = ["sg-034c164acc2aa2bd5", "sg-09630b19e4bf94557"] ##Please insure this security group has Ports - 4646, 8500, 22 and ICMP enabled#
+  default = [""] ##Please insure this security group has Ports - 4646, 8500, 22 and ICMP enabled#
 }
 
 #UserScripts
